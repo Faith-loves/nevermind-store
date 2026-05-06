@@ -1,0 +1,10 @@
+{
+  "name": "nevermind-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full local clothing store app with secure auth, admin tools, uploads, and persistent storage.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

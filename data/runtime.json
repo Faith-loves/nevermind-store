@@ -1,0 +1,2141 @@
+{
+  "categories": [
+    "Men",
+    "Women",
+    "Hoodies",
+    "Tees",
+    "Outerwear",
+    "Accessories"
+  ],
+  "users": [
+    {
+      "id": "c5dca98c-aa47-4283-b6cb-fe14e07f02a0",
+      "name": "Admin User",
+      "email": "admin@nevermind.com",
+      "passwordHash": "26e6bb0fca6050b7011c91876ed572b0:5f608ae43d5a937be616d8b521e5f8524454f12a0d42ac0ab5d0ff00a9866d62d2f9140960fca6b93bfb3035eeff755171b68f5a86579c000d223446bfe50418",
+      "role": "admin",
+      "address": "12 Victoria Island, Lagos",
+      "createdAt": "2026-04-26T00:17:12.040Z"
+    },
+    {
+      "id": "1c96b179-f641-4140-af60-c276c18d021f",
+      "name": "Amina James",
+      "email": "amina@example.com",
+      "passwordHash": "a1e50269f4f9869109fc6f590f93424f:a5d302aadf86ae235382f39b904aafb2a41d40af762acbe689566be01798ff012dbee0066ab28229d2cb0681fac83b324d9b73fd7f123c6c3c69effa793d4362",
+      "role": "user",
+      "address": "45 Admiralty Way, Lekki",
+      "createdAt": "2026-04-26T00:17:12.040Z"
+    },
+    {
+      "id": "857ac8fc-4703-4a32-bba5-cdf8fc81bf09",
+      "name": "Test Buyer",
+      "email": "buyer@example.com",
+      "passwordHash": "90c0888bc86103ef870b9ef868cf807a:04c38d74d90802279ab788e9b3bbb7631bc6f23cd18a350c0ee320badf0c6c4a5a23d1b312d0d4976ac02fe6fddbc351dc026cf139273b7f77472f15c18d41aa",
+      "role": "user",
+      "address": "123 Demo Street",
+      "createdAt": "2026-04-26T00:18:03.407Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "0efd70a4-c38f-42cc-8485-d625b3e957a7",
+      "name": "Studio Cap",
+      "category": "Accessories",
+      "price": 15000,
+      "oldPrice": null,
+      "colors": [
+        "Black"
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "stock": 22,
+      "tags": [],
+      "description": "Low-profile cap with tonal mark and brushed cotton feel.",
+      "rating": 4.5,
+      "images": [
+        "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 299,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 21
+    },
+    {
+      "id": "039dec96-665b-429e-b01a-8cea0eb68bc0",
+      "name": "Red Marble Halter Skirt Set",
+      "category": "Women",
+      "price": 68000,
+      "oldPrice": 74000,
+      "colors": [
+        "Cherry Red",
+        "Blush"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale"
+      ],
+      "description": "Halter neck crop top with a red marble fishtail maxi skirt for statement nights.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/women-red-marble-halter-set.jpeg"
+      ],
+      "imageSeed": 240,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 35
+    },
+    {
+      "id": "6ac01b2a-cf0a-4bb4-8ea2-0eb8d4c51001",
+      "name": "Pink Rose Slip Midi Dress",
+      "category": "Women",
+      "price": 72000,
+      "oldPrice": 79000,
+      "colors": [
+        "Rose Pink",
+        "Cream"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 9,
+      "tags": [
+        "new"
+      ],
+      "description": "Soft floral slip midi with slim straps and a flowing asymmetrical hem.",
+      "rating": 4.7,
+      "images": [
+        "/catalog/women-pink-rose-slip-dress.jpeg"
+      ],
+      "imageSeed": 214,
+      "createdAt": "2026-05-05T08:30:00.000Z",
+      "sales": 14
+    },
+    {
+      "id": "8c3540e0-d88c-48e3-921b-2cd6f10db04d",
+      "name": "Blush Blossom Halter Set",
+      "category": "Women",
+      "price": 69000,
+      "oldPrice": null,
+      "colors": [
+        "Blush Pink"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 8,
+      "tags": [
+        "new"
+      ],
+      "description": "Draped halter top with a matching floral mermaid skirt in soft blush tones.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-blush-blossom-halter-set.jpeg"
+      ],
+      "imageSeed": 78,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 24
+    },
+    {
+      "id": "46530aaf-8fa6-45e0-b3f5-baf6d1038d73",
+      "name": "Ivory Petal One-Shoulder Dress",
+      "category": "Women",
+      "price": 71000,
+      "oldPrice": null,
+      "colors": [
+        "Ivory",
+        "Rose"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 10,
+      "tags": [],
+      "description": "One-shoulder midi dress with a pink petal burst and soft asymmetric drape.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-ivory-petal-one-shoulder-dress.jpeg"
+      ],
+      "imageSeed": 346,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 12
+    },
+    {
+      "id": "0b034447-ebef-4b61-a0a1-3778c06663c3",
+      "name": "Navy Bow Ruffle Mini Dress",
+      "category": "Women",
+      "price": 66000,
+      "oldPrice": 71000,
+      "colors": [
+        "Navy Blue"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 7,
+      "tags": [
+        "sale",
+        "new"
+      ],
+      "description": "Strapless navy mini dress finished with layered ruffles and delicate bow accents.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-navy-bow-ruffle-mini-dress.jpeg"
+      ],
+      "imageSeed": 76,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 21
+    },
+    {
+      "id": "2eee04cb-db55-4847-ab2c-068ccf5437de",
+      "name": "Ivory Petal Maxi Dress",
+      "category": "Women",
+      "price": 76000,
+      "oldPrice": 82000,
+      "colors": [
+        "Ivory",
+        "Pink"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 9,
+      "tags": [],
+      "description": "Off-shoulder full-length dress with petal artwork and a clean flowing silhouette.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-ivory-petal-maxi-dress.jpeg"
+      ],
+      "imageSeed": 293,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 5
+    },
+    {
+      "id": "436ff013-d36d-4cae-a39b-65da332a398a",
+      "name": "Burgundy Ombre Mermaid Gown",
+      "category": "Women",
+      "price": 78000,
+      "oldPrice": null,
+      "colors": [
+        "Wine",
+        "Silver Grey"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 11,
+      "tags": [
+        "new"
+      ],
+      "description": "Ruched bodycon gown fading into a sheer ombre mermaid finish.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-burgundy-ombre-mermaid-gown.jpeg"
+      ],
+      "imageSeed": 258,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 13
+    },
+    {
+      "id": "e610a73a-d639-4486-b72b-4cf089cd0cf2",
+      "name": "Ivory Sunburst Halter Mini Dress",
+      "category": "Women",
+      "price": 63000,
+      "oldPrice": null,
+      "colors": [
+        "Ivory",
+        "Sunflower Yellow"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 13,
+      "tags": [],
+      "description": "Cowl halter mini with layered ruffle skirt and a bright hand-painted sunburst detail.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-ivory-sunburst-halter-mini-dress.jpeg"
+      ],
+      "imageSeed": 314,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 18
+    },
+    {
+      "id": "6ff4d818-efa7-4d53-885e-661f01ebbf44",
+      "name": "Pink Shimmer Plunge Mini Dress",
+      "category": "Women",
+      "price": 85000,
+      "oldPrice": 92000,
+      "colors": [
+        "Dusty Pink"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale"
+      ],
+      "description": "Shimmer knit plunge mini dress with sculpted ruching and a party-ready glow.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-pink-shimmer-plunge-mini-dress.jpeg"
+      ],
+      "imageSeed": 273,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 21
+    },
+    {
+      "id": "e19bef31-2a09-4dbd-82d4-8e560d8a4ad1",
+      "name": "Midnight Halter Ruffle Set",
+      "category": "Women",
+      "price": 61000,
+      "oldPrice": null,
+      "colors": [
+        "Midnight Blue"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 4,
+      "tags": [
+        "limited"
+      ],
+      "description": "Matching halter top and tiered mini skirt set in a deep midnight shade.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-midnight-halter-ruffle-set.jpeg"
+      ],
+      "imageSeed": 30,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 9
+    },
+    {
+      "id": "05469989-e84b-478f-8e50-0f1e6e1b1f47",
+      "name": "Lemon Corsage Mini Dress",
+      "category": "Women",
+      "price": 64000,
+      "oldPrice": null,
+      "colors": [
+        "Butter Yellow"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 20,
+      "tags": [
+        "new"
+      ],
+      "description": "Bright yellow mini dress with side cutout, rosette shoulder, and flirty layered hem.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-lemon-corsage-mini-dress.jpeg"
+      ],
+      "imageSeed": 159,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 17
+    },
+    {
+      "id": "fa1e51e5-a41b-4033-b8f6-47f75a9d0c32",
+      "name": "Blush Scarf Drape Mini Dress",
+      "category": "Women",
+      "price": 62000,
+      "oldPrice": null,
+      "colors": [
+        "Blush Pink"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 12,
+      "tags": [],
+      "description": "Slinky halter mini with deep scarf drape neckline and side-tied wrap detail.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-blush-scarf-drape-mini-dress.jpeg"
+      ],
+      "imageSeed": 277,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 19
+    },
+    {
+      "id": "d31b0c07-6255-4de6-8d30-0db22c38d4db",
+      "name": "Olive Drape Skirt Set",
+      "category": "Women",
+      "price": 70000,
+      "oldPrice": 76000,
+      "colors": [
+        "Olive Green"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 5,
+      "tags": [
+        "sale",
+        "limited",
+        "featured"
+      ],
+      "description": "Off-shoulder crop top with a gathered column skirt and gold accent hardware.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-olive-drape-skirt-set.jpeg"
+      ],
+      "imageSeed": 345,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 20
+    },
+    {
+      "id": "69af1717-b93c-42a3-9b57-5680ab86d459",
+      "name": "Burgundy Ribbed Mermaid Dress",
+      "category": "Women",
+      "price": 74000,
+      "oldPrice": null,
+      "colors": [
+        "Burgundy"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 14,
+      "tags": [
+        "new"
+      ],
+      "description": "Ribbed long-sleeve mermaid dress with tie-front neckline and flared cuffs.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-burgundy-ribbed-mermaid-dress.jpeg"
+      ],
+      "imageSeed": 257,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 15
+    },
+    {
+      "id": "7b489b7d-b0a5-40da-86b8-1321e212826b",
+      "name": "Ivory Bow Knit Dress",
+      "category": "Women",
+      "price": 67000,
+      "oldPrice": null,
+      "colors": [
+        "Ivory",
+        "Red"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 16,
+      "tags": [],
+      "description": "Off-shoulder knit dress with contrast red trim, bow details, and a fitted shape.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-ivory-bow-knit-dress.jpeg"
+      ],
+      "imageSeed": 97,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 20
+    },
+    {
+      "id": "4ab3e252-2092-46fe-99d7-5fda6ce735b4",
+      "name": "Baby Tee Plaid Lounge Set",
+      "category": "Women",
+      "price": 52000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 15,
+      "tags": [
+        "new"
+      ],
+      "description": "Soft baby tee paired with oversized plaid lounge trousers for a relaxed cool-girl fit.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-baby-tee-plaid-lounge-set.jpeg"
+      ],
+      "imageSeed": 162,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 11
+    },
+    {
+      "id": "ecdc1d65-da7d-44f0-9dd2-a3b5ccc8bfb5",
+      "name": "Pink Graffiti Denim Set",
+      "category": "Women",
+      "price": 56000,
+      "oldPrice": null,
+      "colors": [
+        "Pink",
+        "Light Wash"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 8,
+      "tags": [],
+      "description": "Graphic tube top with ultra-short denim shorts and matching belt for a Y2K look.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-pink-graffiti-denim-set.jpeg"
+      ],
+      "imageSeed": 272,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 8
+    },
+    {
+      "id": "3a863148-a11b-4504-af1c-ea42c108fbed",
+      "name": "Bubblegum Denim Micro Set",
+      "category": "Women",
+      "price": 54000,
+      "oldPrice": null,
+      "colors": [
+        "Bubblegum Pink",
+        "Light Wash"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 18,
+      "tags": [
+        "new"
+      ],
+      "description": "Stretch tube top with a belted denim micro skirt in glossy pink tones.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-bubblegum-denim-micro-set.jpeg"
+      ],
+      "imageSeed": 131,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 15
+    },
+    {
+      "id": "41fa3431-e3d6-465c-9c79-51d07b5221fb",
+      "name": "Denim Lace-Up Ruffle Mini Dress",
+      "category": "Women",
+      "price": 69000,
+      "oldPrice": 75000,
+      "colors": [
+        "Denim Blue"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale",
+        "limited",
+        "featured"
+      ],
+      "description": "Body-hugging denim mini with lace-up bust, ruffle straps, and a flounced hem.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-denim-laceup-mini-dress.jpeg"
+      ],
+      "imageSeed": 231,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 17
+    },
+    {
+      "id": "d14a2e0c-ec55-4c85-9003-1ad35764fcde",
+      "name": "Brown Plaid Tiered Mini Dress",
+      "category": "Women",
+      "price": 65000,
+      "oldPrice": null,
+      "colors": [
+        "Mocha Brown"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 7,
+      "tags": [
+        "new"
+      ],
+      "description": "Halter plaid mini dress with smocked waist and layered skirt volume.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/women-brown-plaid-tiered-mini-dress.jpeg"
+      ],
+      "imageSeed": 219,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 24
+    },
+    {
+      "id": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
+      "name": "Grey Palm Resort Set",
+      "category": "Men",
+      "price": 56000,
+      "oldPrice": 62000,
+      "colors": [
+        "Pearl Grey"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 10,
+      "tags": [
+        "new"
+      ],
+      "description": "Palm tree print shirt and drawstring shorts set in a cool grey beach palette.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-grey-palm-resort-set.jpeg"
+      ],
+      "imageSeed": 340,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 84
+    },
+    {
+      "id": "2f193fdc-34ef-4ffa-a30a-2227eeaab17e",
+      "name": "Burgundy Stripe Trouser Set",
+      "category": "Men",
+      "price": 64000,
+      "oldPrice": null,
+      "colors": [
+        "Burgundy",
+        "White"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 8,
+      "tags": [
+        "sale"
+      ],
+      "description": "Striped short-sleeve shirt layered over a tee with relaxed burgundy trousers.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-burgundy-stripe-trouser-set.jpeg"
+      ],
+      "imageSeed": 292,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 90
+    },
+    {
+      "id": "17f5a138-3b02-495c-a9d5-60f97eb157a1",
+      "name": "Birdcage Tee Trouser Set",
+      "category": "Men",
+      "price": 59000,
+      "oldPrice": null,
+      "colors": [
+        "Ivory"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 11,
+      "tags": [
+        "new"
+      ],
+      "description": "Oversized birdcage graphic tee paired with clean wide-leg ivory trousers.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-birdcage-tee-trouser-set.jpeg"
+      ],
+      "imageSeed": 126,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 48
+    },
+    {
+      "id": "9a60e2f8-aee3-46b3-9f53-f4b18c8bedb7",
+      "name": "Monochrome Panel Kaftan Set",
+      "category": "Men",
+      "price": 66000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "White"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 7,
+      "tags": [
+        "new"
+      ],
+      "description": "Modern black-and-white short-sleeve kaftan style set with sharp panel contrast.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-monochrome-panel-kaftan-set.jpeg"
+      ],
+      "imageSeed": 57,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 61
+    },
+    {
+      "id": "52fba9f8-ea32-4f65-891c-2fd642ab14a7",
+      "name": "Leopard Utility Denim Set",
+      "category": "Men",
+      "price": 78000,
+      "oldPrice": 85000,
+      "colors": [
+        "Brown Leopard"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 5,
+      "tags": [
+        "limited",
+        "featured"
+      ],
+      "description": "Leopard print denim jacket and cargo trouser set built for bold streetwear styling.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-leopard-utility-denim-set.jpeg"
+      ],
+      "imageSeed": 51,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 38
+    },
+    {
+      "id": "37269af4-7287-44ce-a81e-5da424820737",
+      "name": "White Palm Vacation Set",
+      "category": "Men",
+      "price": 54000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 12,
+      "tags": [
+        "new"
+      ],
+      "description": "Crisp white resort shirt and shorts set finished with black palm tree prints.",
+      "rating": 4.5,
+      "images": [
+        "/catalog/men-white-palm-vacation-set.jpeg"
+      ],
+      "imageSeed": 161,
+      "createdAt": "2026-04-26T00:17:12.042Z",
+      "sales": 30
+    },
+    {
+      "id": "6ac01b2a-cf0a-4bb4-8ea2-0eb8d4c51002",
+      "name": "Olive Split Floral Short Set",
+      "category": "Men",
+      "price": 57000,
+      "oldPrice": null,
+      "colors": [
+        "Olive",
+        "Ivory"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 9,
+      "tags": [
+        "new"
+      ],
+      "description": "Split floral button-up and matching shorts set with an urban summer edge.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-olive-split-floral-short-set.jpeg"
+      ],
+      "imageSeed": 189,
+      "createdAt": "2026-05-05T08:35:00.000Z",
+      "sales": 11
+    },
+    {
+      "id": "a668eff4-c679-4c76-ba08-06c655416d52",
+      "name": "Emerald Daisy Short Set",
+      "category": "Men",
+      "price": 52000,
+      "oldPrice": null,
+      "colors": [
+        "Emerald Green"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 13,
+      "tags": [
+        "sale"
+      ],
+      "description": "Easy matching tee and shorts set covered in oversized white daisy graphics.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-emerald-daisy-short-set.jpeg"
+      ],
+      "imageSeed": 28,
+      "createdAt": "2026-05-05T08:49:29.685Z",
+      "sales": 12
+    },
+    {
+      "id": "7ccf82e6-2c5d-45e7-b178-556e52c600bd",
+      "name": "Ivory Stripe Senator Set",
+      "category": "Men",
+      "price": 69000,
+      "oldPrice": null,
+      "colors": [
+        "Ivory",
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 6,
+      "tags": [],
+      "description": "Minimal long-sleeve senator set with sharp black stripe detailing for polished occasions.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-ivory-stripe-senator-set.jpeg"
+      ],
+      "imageSeed": 234,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 18
+    },
+    {
+      "id": "2a35a723-ea82-466c-b391-1f189d0b8317",
+      "name": "Sunset Palm Resort Set",
+      "category": "Men",
+      "price": 61000,
+      "oldPrice": 67000,
+      "colors": [
+        "Sand",
+        "Teal"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 8,
+      "tags": [
+        "featured"
+      ],
+      "description": "Resort shirt and shorts set with sunset beach artwork and vacation-ready tones.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-sunset-palm-resort-set.jpeg"
+      ],
+      "imageSeed": 84,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 20
+    },
+    {
+      "id": "2275f2d6-d526-475c-b464-0c1705db5f39",
+      "name": "Blue Flame Glow Tracksuit",
+      "category": "Men",
+      "price": 58000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Electric Blue"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 7,
+      "tags": [
+        "limited"
+      ],
+      "description": "Glow-style hoodie and jogger set with electric blue flame graphics.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-blue-flame-glow-tracksuit.jpeg"
+      ],
+      "imageSeed": 107,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 22
+    },
+    {
+      "id": "2388dda5-18d0-4fa1-b099-8bd2e5bd3754",
+      "name": "Ice Blue Puffer Tracksuit",
+      "category": "Men",
+      "price": 88000,
+      "oldPrice": 95000,
+      "colors": [
+        "Ice Blue"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 4,
+      "tags": [
+        "limited"
+      ],
+      "description": "Layered puffer jacket and relaxed track trouser fit in a clean ice-blue finish.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-ice-blue-puffer-tracksuit.jpeg"
+      ],
+      "imageSeed": 8,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 19
+    },
+    {
+      "id": "3354e95c-9ba1-4a27-bbc3-ea15a18f8819",
+      "name": "Black Prayer Graphic Short Set",
+      "category": "Men",
+      "price": 55000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Grey"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 9,
+      "tags": [
+        "new"
+      ],
+      "description": "Matching oversized tee and shorts set with monochrome prayer artwork.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-black-prayer-graphic-short-set.jpeg"
+      ],
+      "imageSeed": 313,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 14
+    },
+    {
+      "id": "70539417-798f-4b4e-a4a0-41a7bff1313d",
+      "name": "Astronaut Galaxy Hoodie Set",
+      "category": "Men",
+      "price": 50000,
+      "oldPrice": null,
+      "colors": [
+        "Galaxy Blue"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 10,
+      "tags": [
+        "new"
+      ],
+      "description": "Space-themed hoodie and jogger set with bright astronaut artwork and star field print.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-astronaut-galaxy-hoodie-set.jpeg"
+      ],
+      "imageSeed": 135,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 8
+    },
+    {
+      "id": "9c2d8787-057c-4e82-81c1-a68625fa3e1a",
+      "name": "Sand Tribal Resort Suit",
+      "category": "Men",
+      "price": 65000,
+      "oldPrice": null,
+      "colors": [
+        "Sand Beige"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 7,
+      "tags": [
+        "new"
+      ],
+      "description": "Relaxed short-sleeve resort suit with bold tribal print panels and tailored trousers.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-sand-tribal-resort-suit.jpeg"
+      ],
+      "imageSeed": 129,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 11
+    },
+    {
+      "id": "9d280224-2abb-4f86-810f-88376a1d0aab",
+      "name": "Ivory Regal Double-Breasted Suit",
+      "category": "Men",
+      "price": 98000,
+      "oldPrice": 110000,
+      "colors": [
+        "Ivory"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 3,
+      "tags": [
+        "limited"
+      ],
+      "description": "Formal ivory suit with double-breasted gold-button jacket and burgundy pocket square.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-ivory-regal-double-breasted-suit.jpeg"
+      ],
+      "imageSeed": 280,
+      "createdAt": "2026-05-05T08:49:29.687Z",
+      "sales": 6
+    },
+    {
+      "id": "452f2865-1b06-46bd-bf20-2f8daee9ef9d",
+      "name": "Monochrome Palm Sketch Set",
+      "category": "Men",
+      "price": 59000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "White"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 10,
+      "tags": [
+        "sale"
+      ],
+      "description": "Palm sketch print short set with strong monochrome contrast and relaxed summer shape.",
+      "rating": 4.6,
+      "images": [
+        "/catalog/men-monochrome-palm-sketch-set.jpeg"
+      ],
+      "imageSeed": 212,
+      "createdAt": "2026-05-05T08:49:29.688Z",
+      "sales": 23
+    },
+    {
+      "id": "421d3cfe-56d9-423d-a590-c6049244fb64",
+      "name": "Midnight Bomber",
+      "category": "Men",
+      "price": 64000,
+      "oldPrice": 71000,
+      "colors": [
+        "Black",
+        "Olive"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 9,
+      "tags": [
+        "featured",
+        "new"
+      ],
+      "description": "Structured bomber jacket with sharp shoulders and a matte urban finish.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 14,
+      "createdAt": "2026-05-06T20:57:32.698Z",
+      "sales": 10
+    },
+    {
+      "id": "d3181d25-04b9-460d-af10-a694553bccbe",
+      "name": "Slate Denim",
+      "category": "Men",
+      "price": 42000,
+      "oldPrice": null,
+      "colors": [
+        "Blue",
+        "Graphite"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 12,
+      "tags": [
+        "new"
+      ],
+      "description": "Slim straight denim with faded knees and a clean stacked hem.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 233,
+      "createdAt": "2026-05-06T20:57:32.698Z",
+      "sales": 14
+    },
+    {
+      "id": "86a248a0-6325-4911-82a1-4215d2713679",
+      "name": "Monarch Tee",
+      "category": "Men",
+      "price": 26000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 18,
+      "tags": [
+        "featured"
+      ],
+      "description": "Premium cotton tee with a clean chest line and relaxed daily fit.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 327,
+      "createdAt": "2026-05-06T20:57:32.698Z",
+      "sales": 18
+    },
+    {
+      "id": "6e7b73f6-fad2-4f36-b147-06acd5b07d45",
+      "name": "District Trouser",
+      "category": "Men",
+      "price": 48000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Stone"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 10,
+      "tags": [
+        "new"
+      ],
+      "description": "Tailored utility trouser cut for movement with a softened finish.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1506629905607-d405b7a4a3b2?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 14,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 11
+    },
+    {
+      "id": "4ece8f82-a1a4-4ed2-93b6-42c7f4eea3cb",
+      "name": "Runway Knit",
+      "category": "Men",
+      "price": 53000,
+      "oldPrice": 59000,
+      "colors": [
+        "Charcoal",
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "stock": 8,
+      "tags": [
+        "sale"
+      ],
+      "description": "Refined knitwear layer with a heavy drape and minimal seam profile.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 13,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 20
+    },
+    {
+      "id": "6af8e8a0-2ec3-4ec9-8f1e-cd0d17f7a32d",
+      "name": "Crest Polo",
+      "category": "Men",
+      "price": 34000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Bone"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 14,
+      "tags": [
+        "featured"
+      ],
+      "description": "A crisp polo reworked with broader sleeves and a tailored collar.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 245,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 6
+    },
+    {
+      "id": "79407b5e-d268-48c2-b70e-897d35a238d0",
+      "name": "Harbor Overshirt",
+      "category": "Men",
+      "price": 51000,
+      "oldPrice": null,
+      "colors": [
+        "Olive",
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 7,
+      "tags": [
+        "new"
+      ],
+      "description": "Overshirt with a workwear stance and brushed texture.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 156,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 15
+    },
+    {
+      "id": "3fd91510-3eb5-4d5c-bab0-3f6f4c50aafb",
+      "name": "Apex Hoodie",
+      "category": "Men",
+      "price": 47000,
+      "oldPrice": 54000,
+      "colors": [
+        "Black",
+        "Stone"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 11,
+      "tags": [
+        "sale",
+        "featured"
+      ],
+      "description": "Heavy fleece hoodie with a cropped body and sharp pocket geometry.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 89,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 19
+    },
+    {
+      "id": "363a1811-1065-4d65-8af6-47eebeaf4fb1",
+      "name": "Shadow Vest",
+      "category": "Men",
+      "price": 39000,
+      "oldPrice": null,
+      "colors": [
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "stock": 9,
+      "tags": [
+        "new"
+      ],
+      "description": "Layering vest with a sleek zip front and high-neck protection.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 352,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 15
+    },
+    {
+      "id": "1a46d6c5-8b14-467d-9e19-ea4af62ff660",
+      "name": "Rivet Cargo",
+      "category": "Men",
+      "price": 56000,
+      "oldPrice": null,
+      "colors": [
+        "Graphite",
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 10,
+      "tags": [
+        "limited"
+      ],
+      "description": "Modern cargo trouser with metal trim and a sculpted leg.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 348,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 18
+    },
+    {
+      "id": "95159c3a-61e8-4e9e-b4a9-c0b9aa8c69ae",
+      "name": "Northline Jacket",
+      "category": "Men",
+      "price": 68000,
+      "oldPrice": 74000,
+      "colors": [
+        "Black",
+        "Khaki"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale",
+        "featured"
+      ],
+      "description": "Performance outer layer built for cold streets and clean lines.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 74,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 7
+    },
+    {
+      "id": "09be18c7-7999-4c36-b3a0-237a293cbb41",
+      "name": "Studio Crew",
+      "category": "Men",
+      "price": 33000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Ash"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 16,
+      "tags": [
+        "featured"
+      ],
+      "description": "Crewneck sweatshirt with a soft hand feel and boxy profile.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 189,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 21
+    },
+    {
+      "id": "4031ae4a-b433-4f36-8fa0-b4b618ceee46",
+      "name": "Vertex Shirt",
+      "category": "Men",
+      "price": 41000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Navy"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 13,
+      "tags": [
+        "new"
+      ],
+      "description": "Sharp woven shirt with a longer body and polished cuff detail.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1519340333755-c1aa5571fd46?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 359,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 20
+    },
+    {
+      "id": "ec1bfdf3-8b71-4bf3-8b7a-82275414ea8f",
+      "name": "Pier Coat",
+      "category": "Men",
+      "price": 79000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Camel"
+      ],
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "stock": 5,
+      "tags": [
+        "limited"
+      ],
+      "description": "Longline coat with crisp structure and understated buttons.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 246,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 13
+    },
+    {
+      "id": "e26f4a97-6f56-4e55-a85c-b8cdf554d5c7",
+      "name": "Signal Jogger",
+      "category": "Men",
+      "price": 36000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Grey"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 15,
+      "tags": [
+        "featured"
+      ],
+      "description": "Premium jogger with a clean taper and soft fleece interior.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 154,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 20
+    },
+    {
+      "id": "ecb0885b-4a49-4329-82a9-64bda59b2e7a",
+      "name": "Cinder Set",
+      "category": "Men",
+      "price": 87000,
+      "oldPrice": 92000,
+      "colors": [
+        "Black"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 4,
+      "tags": [
+        "new",
+        "limited"
+      ],
+      "description": "Matching street set built for statement dressing with clean proportion.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 173,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 23
+    },
+    {
+      "id": "57c6c9ad-e655-441b-8475-6e36f550034c",
+      "name": "Satin Slip Dress",
+      "category": "Women",
+      "price": 69000,
+      "oldPrice": 76000,
+      "colors": [
+        "Black",
+        "Wine"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 8,
+      "tags": [
+        "featured",
+        "new"
+      ],
+      "description": "Fluid satin slip dress with a sleek neckline and evening polish.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 300,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 11
+    },
+    {
+      "id": "f2f68323-f225-4368-9e04-611784855216",
+      "name": "Muse Blazer",
+      "category": "Women",
+      "price": 62000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Beige"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 10,
+      "tags": [
+        "featured"
+      ],
+      "description": "Tailored blazer with a strong shoulder and clean open front.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 174,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 15
+    },
+    {
+      "id": "abc6fe0a-605f-4fdb-8a26-e0d4246f6541",
+      "name": "Glow Set",
+      "category": "Women",
+      "price": 75000,
+      "oldPrice": 82000,
+      "colors": [
+        "Gold",
+        "Stone"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 7,
+      "tags": [
+        "sale",
+        "new"
+      ],
+      "description": "Matching co-ord set with a bright luxury tone and shaped waist.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 65,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 13
+    },
+    {
+      "id": "ab932772-aca3-4ef2-bff5-750a52dfdcd2",
+      "name": "Contour Dress",
+      "category": "Women",
+      "price": 71000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Olive"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 9,
+      "tags": [
+        "featured"
+      ],
+      "description": "Body-skimming dress with minimal seams and a strong neckline.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 92,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 16
+    },
+    {
+      "id": "f94c0152-ef3a-4c11-b40b-8bc32b782e90",
+      "name": "Silk Shirt Set",
+      "category": "Women",
+      "price": 66000,
+      "oldPrice": null,
+      "colors": [
+        "Bone",
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 11,
+      "tags": [
+        "new"
+      ],
+      "description": "Soft silk shirt set designed for luxury movement and ease.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 236,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 20
+    },
+    {
+      "id": "e994eb9e-faa4-4bdc-a5ed-e650131d9f4f",
+      "name": "Aster Knit Dress",
+      "category": "Women",
+      "price": 58000,
+      "oldPrice": null,
+      "colors": [
+        "Cream",
+        "Charcoal"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 13,
+      "tags": [
+        "featured"
+      ],
+      "description": "Refined knit dress with a sculpted fit and soft vertical line.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 39,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 16
+    },
+    {
+      "id": "7facd830-bbdf-4f00-84be-7fb49b1ba2d1",
+      "name": "Night Bloom Jacket",
+      "category": "Women",
+      "price": 64000,
+      "oldPrice": 70000,
+      "colors": [
+        "Black",
+        "Red"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale"
+      ],
+      "description": "Statement jacket with dramatic sleeve volume and soft structure.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 89,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 8
+    },
+    {
+      "id": "ea4b0e93-420c-4a13-997b-61b9e74f6820",
+      "name": "Shoreline Gown",
+      "category": "Women",
+      "price": 92000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Stone"
+      ],
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "stock": 4,
+      "tags": [
+        "limited"
+      ],
+      "description": "Long gown cut with a clean fall and elevated event-ready finish.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 142,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 5
+    },
+    {
+      "id": "06e9c7fb-bd46-431c-80b5-5f859e55a3cb",
+      "name": "Halo Crop Top",
+      "category": "Women",
+      "price": 24000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 20,
+      "tags": [
+        "new"
+      ],
+      "description": "Minimal crop top with a sculpted fit and softened sleeve line.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 14,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 9
+    },
+    {
+      "id": "93497572-cba1-44dd-aa02-32e7e5abf9c0",
+      "name": "Rosette Pants",
+      "category": "Women",
+      "price": 43000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Beige"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 12,
+      "tags": [
+        "featured"
+      ],
+      "description": "Wide-leg pant with soft tailoring and a quiet statement shape.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 160,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 8
+    },
+    {
+      "id": "36c953f2-3bb8-42c3-a0e4-748e532867a3",
+      "name": "Velour Tracksuit",
+      "category": "Women",
+      "price": 81000,
+      "oldPrice": 87000,
+      "colors": [
+        "Wine",
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 5,
+      "tags": [
+        "sale",
+        "limited"
+      ],
+      "description": "Luxury velour set with a fitted waist and dramatic line.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 302,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 15
+    },
+    {
+      "id": "76e381ad-ec28-4650-814e-784802ca0717",
+      "name": "Studio Mini Dress",
+      "category": "Women",
+      "price": 52000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Tan"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 14,
+      "tags": [
+        "new"
+      ],
+      "description": "Short dress built with a clean edge and polished city feel.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 319,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 21
+    },
+    {
+      "id": "471b5e7c-4a83-4b20-bd93-b4a70473c552",
+      "name": "Flare Sleeve Top",
+      "category": "Women",
+      "price": 32000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Cream"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 16,
+      "tags": [
+        "featured"
+      ],
+      "description": "Soft flare sleeve top with a balanced dramatic shape.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 116,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 13
+    },
+    {
+      "id": "17bbdf93-c8e3-488a-a832-90e3eed08c80",
+      "name": "Monroe Skirt",
+      "category": "Women",
+      "price": 35000,
+      "oldPrice": null,
+      "colors": [
+        "Black",
+        "Grey"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 15,
+      "tags": [
+        "new"
+      ],
+      "description": "A-line skirt with a clean fall and a sharp everyday finish.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 291,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 20
+    },
+    {
+      "id": "e0555175-5090-4aa6-bd6b-fd8b97c5ab80",
+      "name": "Solar Hoodie Set",
+      "category": "Women",
+      "price": 70000,
+      "oldPrice": null,
+      "colors": [
+        "Yellow",
+        "Stone"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 8,
+      "tags": [
+        "featured"
+      ],
+      "description": "Two-piece hoodie set with a strong color pop and lounge luxury feel.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 249,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 8
+    },
+    {
+      "id": "6c99f396-2d48-47ef-a7d8-63011b09a639",
+      "name": "Coco Blouse",
+      "category": "Women",
+      "price": 29000,
+      "oldPrice": null,
+      "colors": [
+        "White",
+        "Wine"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 18,
+      "tags": [
+        "new"
+      ],
+      "description": "Light blouse with elevated softness and a refined collar line.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 189,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 24
+    },
+    {
+      "id": "b004959e-8f53-4095-b66d-58883e841e90",
+      "name": "Velvet Corset Dress",
+      "category": "Women",
+      "price": 76000,
+      "oldPrice": 83000,
+      "colors": [
+        "Black",
+        "Plum"
+      ],
+      "sizes": [
+        "S",
+        "M"
+      ],
+      "stock": 6,
+      "tags": [
+        "sale",
+        "limited"
+      ],
+      "description": "Corset-inspired velvet dress with rich texture and a structured waist.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 151,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 17
+    },
+    {
+      "id": "405108e5-4aad-4c83-b62e-255167eb9e3f",
+      "name": "Onyx Trouser Set",
+      "category": "Women",
+      "price": 85000,
+      "oldPrice": null,
+      "colors": [
+        "Black"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 7,
+      "tags": [
+        "featured",
+        "new"
+      ],
+      "description": "Sharp matching trouser set with an executive city silhouette.",
+      "rating": 4.6,
+      "images": [
+        "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80"
+      ],
+      "imageSeed": 322,
+      "createdAt": "2026-05-06T20:57:32.699Z",
+      "sales": 8
+    }
+  ],
+  "carts": [
+    {
+      "id": "66f45b78-c0b3-4686-883c-0f9780957f0c",
+      "userId": "c5dca98c-aa47-4283-b6cb-fe14e07f02a0",
+      "productId": "2f193fdc-34ef-4ffa-a30a-2227eeaab17e",
+      "quantity": 1,
+      "size": "M",
+      "color": "Black",
+      "createdAt": "2026-05-05T09:33:45.685Z"
+    }
+  ],
+  "wishlists": [
+    {
+      "id": "9f41a9c8-d751-4fd2-8aea-7f2ec9b02e1d",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
+      "createdAt": "2026-05-05T10:10:03.488Z"
+    },
+    {
+      "id": "4b59b377-b903-436d-a9f1-d31023968067",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "2f193fdc-34ef-4ffa-a30a-2227eeaab17e",
+      "createdAt": "2026-05-05T10:10:05.222Z"
+    },
+    {
+      "id": "12e92ba6-6452-4afa-b6f4-d4d425e1096a",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "17f5a138-3b02-495c-a9d5-60f97eb157a1",
+      "createdAt": "2026-05-05T10:10:06.528Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-1777976156661",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "customerName": "Amina James",
+      "email": "amina@example.com",
+      "phone": "09045586859",
+      "address": "45 Admiralty Way, Lekki",
+      "country": "Nigeria",
+      "deliveryMethod": "Standard Delivery",
+      "paymentMethod": "Paystack",
+      "paymentStatus": "Paid",
+      "paymentReference": "PAY-1777976156661",
+      "status": "Pending",
+      "subtotal": 47000,
+      "shipping": 5000,
+      "total": 52000,
+      "items": [
+        {
+          "productId": "2f193fdc-34ef-4ffa-a30a-2227eeaab17e",
+          "name": "Metro Hoodie",
+          "quantity": 1,
+          "size": "M",
+          "color": "Black",
+          "price": 47000
+        }
+      ],
+      "createdAt": "2026-05-05T10:15:56.662Z"
+    },
+    {
+      "id": "ORD-1777162683480",
+      "userId": "857ac8fc-4703-4a32-bba5-cdf8fc81bf09",
+      "customerName": "Test Buyer",
+      "email": "buyer@example.com",
+      "phone": "+2348000000000",
+      "address": "123 Demo Street",
+      "country": "Nigeria",
+      "deliveryMethod": "Standard Delivery",
+      "paymentMethod": "Paystack",
+      "paymentStatus": "Paid",
+      "paymentReference": "PAY-1777162683480",
+      "status": "Pending",
+      "subtotal": 45000,
+      "shipping": 5000,
+      "total": 50000,
+      "items": [
+        {
+          "productId": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
+          "name": "Chaos Hoodie",
+          "quantity": 1,
+          "size": "S",
+          "color": "Black",
+          "price": 45000
+        }
+      ],
+      "createdAt": "2026-04-26T00:18:03.480Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "0aa6febc-9e22-4ed6-b489-60346b6c2476",
+      "productId": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "userName": "Amina",
+      "rating": 5,
+      "comment": "The fit is clean and the fabric feels premium.",
+      "createdAt": "2026-04-26T00:17:12.040Z"
+    },
+    {
+      "id": "82e49e33-161b-469d-a013-ecb1b477a3a3",
+      "productId": "039dec96-665b-429e-b01a-8cea0eb68bc0",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "userName": "Amina",
+      "rating": 5,
+      "comment": "Looks expensive in person and sizes match perfectly.",
+      "createdAt": "2026-04-26T00:17:12.040Z"
+    }
+  ],
+  "newsletter": [],
+  "contacts": [],
+  "failedPayments": []
+}
