@@ -87,6 +87,7 @@ function handleRouteNavigation(event) {
 
 function route() {
   renderHeaderState();
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   const routeName = getRoute();
   if (routeName === "/home") return renderHome();
   if (routeName === "/shop") return renderShop();
@@ -823,7 +824,7 @@ function mediaBlock(product, className) {
 
 function galleryTile(product, image, primary) {
   const className = primary ? "gallery-tile primary" : "gallery-tile";
-  if (image.startsWith("/uploads/")) {
+  if (image && !image.startsWith("gradient")) {
     return `<div class="${className}" data-action="zoom-image" data-src="${image}"><img loading="lazy" src="${image}" alt="${escapeHtml(product.name)}"></div>`;
   }
   return `<div class="${className}" data-action="zoom-image" data-src="" style="${gradientStyle(product.imageSeed + (primary ? 0 : 22))}"></div>`;
