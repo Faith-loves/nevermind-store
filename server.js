@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const os = require("os");
 const { URL } = require("url");
 
 const ROOT = __dirname;
@@ -28,6 +29,12 @@ const mimeTypes = {
   ".svg": "image/svg+xml",
   ".txt": "text/plain; charset=utf-8"
 };
+
+const isVercel = Boolean(process.env.VERCEL);
+const RUNTIME_ROOT = isVercel ? path.join(os.tmpdir(), "nevermind-store") : ROOT;
+const RUNTIME_UPLOAD_DIR = path.join(RUNTIME_ROOT, "uploads");
+const RUNTIME_OUTBOX_DIR = path.join(RUNTIME_ROOT, "outbox");
+const RUNTIME_DATA_FILE = path.join(RUNTIME_ROOT, "runtime.json");
 
 const defaultProductImages = {
   "Chaos Hoodie": [
@@ -101,11 +108,11 @@ const supplementalCatalog = {
 const rateLimitBuckets = new Map();
 
 ensureDir(PUBLIC_DIR);
-ensureDir(UPLOAD_DIR);
-ensureDir(OUTBOX_DIR);
-ensureDir(path.dirname(DATA_FILE));
+ensureDir(isVercel ? RUNTIME_UPLOAD_DIR : UPLOAD_DIR);
+ensureDir(isVercel ? RUNTIME_OUTBOX_DIR : OUTBOX_DIR);
+ensureDir(path.dirname(getWritableDataFile()));
 
-const server = http.createServer(async (req, res) => {
+async function appHandler(req, res) {
   try {
     addCorsHeaders(res);
     if (req.method === "OPTIONS") return sendEmpty(res, 204);
@@ -121,7 +128,8 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (pathname.startsWith("/uploads/")) {
-      return serveFile(res, path.join(ROOT, pathname));
+      const uploadPath = isVercel ? path.join(RUNTIME_ROOT, pathname) : path.join(ROOT, pathname);
+      return serveFile(res, uploadPath);
     }
 
     if (pathname === "/" || pathname === "/index.html") {
@@ -141,11 +149,17 @@ const server = http.createServer(async (req, res) => {
     }
     return sendJson(res, 500, { error: "Server error" });
   }
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`Nevermind Store running on ${APP_URL}`);
-});
+const server = http.createServer(appHandler);
+
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Nevermind Store running on ${APP_URL}`);
+  });
+}
+
+module.exports = appHandler;
 
 async function handleApi(req, res, url) {
   const pathname = url.pathname;
@@ -661,7 +675,7 @@ function saveBase64Image(file) {
   if (!matches) throw new Error("Invalid image payload");
   const extension = matches[1].split("/")[1] === "jpeg" ? "jpg" : matches[1].split("/")[1];
   const filename = `${Date.now()}-${slugify(path.parse(name).name)}.${extension}`;
-  const target = path.join(UPLOAD_DIR, filename);
+  const target = path.join(isVercel ? RUNTIME_UPLOAD_DIR : UPLOAD_DIR, filename);
   fs.writeFileSync(target, Buffer.from(matches[2], "base64"));
   return { url: `/uploads/${filename}`, name: filename };
 }
@@ -680,7 +694,7 @@ function writeEmailOutbox(order) {
     "Items:",
     ...order.items.map((item) => `- ${item.name} x${item.quantity} (${item.size}/${item.color})`)
   ].join("\n");
-  fs.writeFileSync(path.join(OUTBOX_DIR, `${order.id}.txt`), payload);
+  fs.writeFileSync(path.join(isVercel ? RUNTIME_OUTBOX_DIR : OUTBOX_DIR, `${order.id}.txt`), payload);
 }
 
 function authenticate(req, db) {
@@ -744,12 +758,15 @@ function sanitizeUser(user) {
 }
 
 function readDb() {
-  if (!fs.existsSync(DATA_FILE)) {
-    const seeded = createSeedDb();
-    fs.writeFileSync(DATA_FILE, JSON.stringify(seeded, null, 2));
-    return seeded;
+  const dataFile = getWritableDataFile();
+  if (!fs.existsSync(dataFile)) {
+    const db = fs.existsSync(DATA_FILE)
+      ? JSON.parse(fs.readFileSync(DATA_FILE, "utf8"))
+      : createSeedDb();
+    fs.writeFileSync(dataFile, JSON.stringify(db, null, 2));
+    return db;
   }
-  const db = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
+  const db = JSON.parse(fs.readFileSync(dataFile, "utf8"));
   let changed = false;
   db.products = db.products.map((product) => {
     if (!Array.isArray(product.images) || !product.images.length) {
@@ -759,12 +776,16 @@ function readDb() {
     return product;
   });
   changed = ensureCatalogCompleteness(db) || changed;
-  if (changed) fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2));
+  if (changed) fs.writeFileSync(dataFile, JSON.stringify(db, null, 2));
   return db;
 }
 
 function writeDb(db) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2));
+  fs.writeFileSync(getWritableDataFile(), JSON.stringify(db, null, 2));
+}
+
+function getWritableDataFile() {
+  return isVercel ? RUNTIME_DATA_FILE : DATA_FILE;
 }
 
 function createSeedDb() {
