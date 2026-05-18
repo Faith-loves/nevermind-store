@@ -778,6 +778,8 @@ function renderLocked(message) {
 }
 
 function productCard(product) {
+  const defaultSize = product.sizes?.[0] || "One Size";
+  const defaultColor = product.colors?.[0] || "Default";
   return `
     <article class="product-card">
       ${mediaBlock(product, "product-media")}
@@ -795,7 +797,16 @@ function productCard(product) {
         </div>
         <div class="inline-actions spaced">
           <a class="btn-secondary" href="#/product/${product.id}">View details</a>
-          <button class="btn" ${product.stock ? "" : "disabled"} data-action="quick-add" data-product-id="${product.id}">${state.user ? "Add to cart" : "Login to add"}</button>
+          <button
+            class="btn"
+            ${product.stock ? "" : "disabled"}
+            data-action="quick-add"
+            data-product-id="${product.id}"
+            data-size="${escapeHtml(defaultSize)}"
+            data-color="${escapeHtml(defaultColor)}"
+          >
+            ${state.user ? "Add to cart" : "Login to add"}
+          </button>
           <button class="btn-ghost" data-action="wishlist-toggle" data-product-id="${product.id}">${isWishlisted(product.id) ? "Saved" : "Wishlist"}</button>
         </div>
       </div>
@@ -902,7 +913,12 @@ async function handleClicks(event) {
   const action = trigger.dataset.action;
 
   try {
-    if (action === "quick-add") return await addToCart(trigger.dataset.productId, 1, "M", "Black");
+    if (action === "quick-add") return await addToCart(
+      trigger.dataset.productId,
+      1,
+      trigger.dataset.size || "One Size",
+      trigger.dataset.color || "Default"
+    );
     if (action === "wishlist-toggle") return await toggleWishlist(trigger.dataset.productId);
     if (action === "wishlist-remove") return await removeWishlist(trigger.dataset.productId);
     if (action === "wishlist-move-to-cart") return await moveWishlistToCart(
@@ -1135,6 +1151,12 @@ async function addToCart(productId, quantity, size, color) {
   window.location.hash = "#/cart";
 }
 
+async function addWishlistItemToCart(productId, size, color) {
+  await ensureSession();
+  state.cart = await api("/api/cart", { method: "POST", auth: true, body: { productId, quantity: 1, size, color } });
+  renderHeaderState();
+}
+
 async function toggleWishlist(productId) {
   await ensureSession();
   await api("/api/wishlist", { method: "POST", auth: true, body: { productId } });
@@ -1166,7 +1188,7 @@ async function removeWishlist(productId) {
 }
 
 async function moveWishlistToCart(productId, size, color) {
-  await addToCart(productId, 1, size || "One Size", color || "Default");
+  await addWishlistItemToCart(productId, size || "One Size", color || "Default");
   await api(`/api/wishlist/${productId}`, { method: "DELETE", auth: true });
   const wishlist = await api("/api/wishlist", { auth: true });
   state.wishlist = wishlist.items;

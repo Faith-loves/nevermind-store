@@ -277,11 +277,11 @@ async function handleApi(req, res, url) {
     if (!auth.user) return sendJson(res, 401, { error: "Unauthorized" });
     const body = await readJson(req);
     const product = getProductOrThrow(db, body.productId);
-    validateStock(product, Number(body.quantity || 1));
     const size = requireString(body.size, "Size is required");
     const color = requireString(body.color, "Color is required");
     const quantity = Math.max(1, Number(body.quantity || 1));
     const existing = db.carts.find((entry) => entry.userId === auth.user.id && entry.productId === product.id && entry.size === size && entry.color === color);
+    validateStock(product, (existing?.quantity || 0) + quantity);
     if (existing) existing.quantity += quantity;
     else {
       db.carts.push({

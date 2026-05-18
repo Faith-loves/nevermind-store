@@ -723,6 +723,24 @@ textarea {
   outline: none;
 }
 
+select {
+  color-scheme: dark;
+  background-color: #111;
+}
+
+select option,
+select optgroup {
+  color: var(--text);
+  background-color: #111;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--line-strong);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
 textarea {
   min-height: 7rem;
   resize: vertical;
