@@ -11,7 +11,8 @@ const state = {
     selectedColor: "Black",
     quantity: 1,
     editingProductId: null,
-    searchTimer: null
+    searchTimer: null,
+    pendingAction: null
   }
 };
 
@@ -35,7 +36,7 @@ const modalContent = document.getElementById("modal-content");
 bootstrap().catch(handleError);
 
 async function bootstrap() {
-  const bootstrapData = await api("/api/bootstrap");
+  const bootstrapData = await api("/api/bootstrap", { auth: true });
   state.settings = bootstrapData.settings;
   state.user = bootstrapData.session;
   await refreshReferenceData();
@@ -932,8 +933,7 @@ async function handleClicks(event) {
     if (action === "qty") return adjustQty(Number(trigger.dataset.delta));
     if (action === "cart-add") return await addToCart(trigger.dataset.productId, state.ui.quantity, state.ui.selectedSize, state.ui.selectedColor);
     if (action === "buy-now") {
-      await addToCart(trigger.dataset.productId, state.ui.quantity, state.ui.selectedSize, state.ui.selectedColor);
-      window.location.hash = "#/checkout";
+      await addToCart(trigger.dataset.productId, state.ui.quantity, state.ui.selectedSize, state.ui.selectedColor, { destination: "#/checkout" });
       return;
     }
     if (action === "cart-qty") return await updateCart(trigger.dataset.id, Number(trigger.dataset.delta));
@@ -1000,9 +1000,8 @@ async function login() {
       password: document.getElementById("login-password").value
     }
   });
-  setSession(payload);
-  notify("Welcome back.");
-  window.location.hash = "#/home";
+  await setSession(payload);
+  await resumePendingAction("Welcome back.");
 }
 
 async function register() {
@@ -1017,9 +1016,8 @@ async function register() {
       password
     }
   });
-  setSession(payload);
-  notify("Account created.");
-  window.location.hash = "#/home";
+  await setSession(payload);
+  await resumePendingAction("Account created.");
 }
 
 async function addReview(productId) {
@@ -1144,12 +1142,13 @@ function fileToDataUrl(file) {
   });
 }
 
-async function addToCart(productId, quantity, size, color) {
-  await ensureSession();
+async function addToCart(productId, quantity, size, color, options = {}) {
+  const destination = options.destination || "#/cart";
+  await ensureSession({ type: "cart-add", productId, quantity, size, color, destination });
   state.cart = await api("/api/cart", { method: "POST", auth: true, body: { productId, quantity, size, color } });
   renderHeaderState();
   notify("Added to cart.");
-  window.location.hash = "#/cart";
+  navigateToHash(destination);
 }
 
 async function addWishlistItemToCart(productId, size, color) {
@@ -1159,7 +1158,7 @@ async function addWishlistItemToCart(productId, size, color) {
 }
 
 async function toggleWishlist(productId) {
-  await ensureSession();
+  await ensureSession({ type: "wishlist-toggle", productId });
   await api("/api/wishlist", { method: "POST", auth: true, body: { productId } });
   const wishlist = await api("/api/wishlist", { auth: true });
   state.wishlist = wishlist.items;
@@ -1195,7 +1194,7 @@ async function moveWishlistToCart(productId, size, color) {
   state.wishlist = wishlist.items;
   renderHeaderState();
   notify("Moved to cart.");
-  window.location.hash = "#/cart";
+  navigateToHash("#/cart");
 }
 
 function chooseVariant(key, value) {
@@ -1218,11 +1217,11 @@ function logout() {
   });
 }
 
-function setSession(payload) {
+async function setSession(payload) {
   state.token = payload.token;
   state.user = payload.user;
   localStorage.setItem("nevermind-token", state.token);
-  refreshReferenceData();
+  await refreshReferenceData();
 }
 
 function applyShopFilters() {
@@ -1244,6 +1243,14 @@ function setShopPage(page) {
   const params = getParams();
   params.set("page", page);
   window.location.hash = `#/shop?${params.toString()}`;
+}
+
+function navigateToHash(hash) {
+  if (window.location.hash === hash) {
+    route();
+    return;
+  }
+  window.location.hash = hash;
 }
 
 async function handleSearchSuggest(event) {
@@ -1279,11 +1286,53 @@ function closeModal() {
   modalContent.innerHTML = "";
 }
 
-async function ensureSession() {
+async function ensureSession(pendingAction = null) {
   if (state.user) return;
-  notify("Please log in first.");
+  if (pendingAction) state.ui.pendingAction = pendingAction;
+  notify(pendingAction ? "Login first and we will finish that action." : "Please log in first.");
   window.location.hash = "#/login";
-  throw new Error("Login required");
+  throw new Error("SESSION_REQUIRED");
+}
+
+async function resumePendingAction(fallbackMessage) {
+  const pendingAction = state.ui.pendingAction;
+  state.ui.pendingAction = null;
+
+  if (!pendingAction) {
+    notify(fallbackMessage);
+    window.location.hash = "#/home";
+    return;
+  }
+
+  if (pendingAction.type === "cart-add") {
+    state.cart = await api("/api/cart", {
+      method: "POST",
+      auth: true,
+      body: {
+        productId: pendingAction.productId,
+        quantity: pendingAction.quantity,
+        size: pendingAction.size,
+        color: pendingAction.color
+      }
+    });
+    renderHeaderState();
+    notify("Added to cart.");
+    navigateToHash(pendingAction.destination || "#/cart");
+    return;
+  }
+
+  if (pendingAction.type === "wishlist-toggle") {
+    await api("/api/wishlist", { method: "POST", auth: true, body: { productId: pendingAction.productId } });
+    const wishlist = await api("/api/wishlist", { auth: true });
+    state.wishlist = wishlist.items;
+    renderHeaderState();
+    notify("Wishlist updated.");
+    navigateToHash("#/wishlist");
+    return;
+  }
+
+  notify(fallbackMessage);
+  window.location.hash = "#/home";
 }
 
 async function api(url, options = {}) {
@@ -1309,6 +1358,7 @@ function notify(message) {
 }
 
 function handleError(error) {
+  if (error.message === "SESSION_REQUIRED") return;
   console.error(error);
   notify(error.message || "Something went wrong.");
 }

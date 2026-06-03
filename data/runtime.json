@@ -34,6 +34,15 @@
       "role": "user",
       "address": "123 Demo Street",
       "createdAt": "2026-04-26T00:18:03.407Z"
+    },
+    {
+      "id": "fbc68612-5ec2-406c-a422-23034f423fdf",
+      "name": "joy",
+      "email": "joy@gmail.com",
+      "passwordHash": "845269d16db44d2ff3f03838d53fe905:8b10ae0ac44260d298584259f074a7b232a780466b30fa01347cd1bc95cccf98877d60777ea4b5c2b16dc4d3cc62a3787d699fac55819fc5724a05f684537e97",
+      "role": "user",
+      "address": "",
+      "createdAt": "2026-05-18T07:33:20.720Z"
     }
   ],
   "products": [
@@ -2035,26 +2044,50 @@
       "size": "M",
       "color": "Black",
       "createdAt": "2026-05-05T09:33:45.685Z"
+    },
+    {
+      "id": "706ead27-5687-4848-a7c3-f182ccf7e386",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "d31b0c07-6255-4de6-8d30-0db22c38d4db",
+      "quantity": 2,
+      "size": "S",
+      "color": "Olive Green",
+      "createdAt": "2026-05-18T07:25:53.091Z"
+    },
+    {
+      "id": "61201f93-e41a-4dbb-abc9-c05c518c4d12",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "17f5a138-3b02-495c-a9d5-60f97eb157a1",
+      "quantity": 1,
+      "size": "M",
+      "color": "Ivory",
+      "createdAt": "2026-05-18T07:26:12.625Z"
+    },
+    {
+      "id": "5a2d8b90-f85f-404c-8230-b398c538e24d",
+      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
+      "productId": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
+      "quantity": 1,
+      "size": "M",
+      "color": "Pearl Grey",
+      "createdAt": "2026-05-18T07:26:19.115Z"
+    },
+    {
+      "id": "a036922d-1a70-4127-a271-0a04d52f8f8c",
+      "userId": "fbc68612-5ec2-406c-a422-23034f423fdf",
+      "productId": "41fa3431-e3d6-465c-9c79-51d07b5221fb",
+      "quantity": 1,
+      "size": "S",
+      "color": "Denim Blue",
+      "createdAt": "2026-05-18T07:33:28.848Z"
     }
   ],
   "wishlists": [
-    {
-      "id": "9f41a9c8-d751-4fd2-8aea-7f2ec9b02e1d",
-      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
-      "productId": "4213241d-cf54-4df2-9e83-a256f2e05bb5",
-      "createdAt": "2026-05-05T10:10:03.488Z"
-    },
     {
       "id": "4b59b377-b903-436d-a9f1-d31023968067",
       "userId": "1c96b179-f641-4140-af60-c276c18d021f",
       "productId": "2f193fdc-34ef-4ffa-a30a-2227eeaab17e",
       "createdAt": "2026-05-05T10:10:05.222Z"
-    },
-    {
-      "id": "12e92ba6-6452-4afa-b6f4-d4d425e1096a",
-      "userId": "1c96b179-f641-4140-af60-c276c18d021f",
-      "productId": "17f5a138-3b02-495c-a9d5-60f97eb157a1",
-      "createdAt": "2026-05-05T10:10:06.528Z"
     }
   ],
   "orders": [
